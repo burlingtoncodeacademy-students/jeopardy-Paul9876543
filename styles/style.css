@@ -1,53 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-/*-------------------- landing page css ---------------------- */
+/* --------------------header-------------------- */
 
-/* ---container--- */
-.container {
-  width: 100vw;
-  height: auto;
+body {
+  margin: 0;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  padding: 0;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: blue;
 }
-
-/* ---header--- */
-.header {
+/* ---Class for headers--- */
+.title {
+  display: block;
+  margin: 0, auto;
+  padding: 0;
   text-align: center;
-  color: blue;
   border: none;
 }
 
-/* ---image--- */
-.img0 {
+/* --------------------images-------------------- */
+
+/* ---Class for all images--- */
+.img {
   display: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
   border: 3px solid black;
 }
-#imgZero {
+/* ---Landing page Trebek logo image  */
+#imgOne {
+  display: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
+  border: 3px solid black;
+}
+/* --- Round One Jeopardy logo image--- */
+#imgTwo {
+  display: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
+}
+/* ---Round Two Double Jeopardy logo image--- */
+#imgThree {
+  display: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
+}
+/* ---Round Three Final Jeopardy logo image */
+#imgFour {
   display: center;
   justify-content: center;
   width: 500px;
   height: 200px;
 }
 
-/* ---start button--- */
-.container2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  min-width: auto;
-}
+/*--------------------Button-------------------- */
 
+/* ---Class for buttons--- */
 .btn {
   font-family: "Press Start 2P", cursive;
   letter-spacing: 2px;
   background-color: white;
-  width: 100px;
+  width: auto;
   height: 50px;
   border: none;
   color: white;
@@ -57,64 +76,22 @@
   transition: ease-out 0.3s;
   font-size: 1rem;
   outline: none;
+  margin: 10px;
 }
 
-/* hover transition */
+.question {
+  width: auto;
+  height: auto;
+}
+
+/* ---hover transition--- */
 .btn:hover {
-  box-shadow: inset 100px 0 0 0 gold;
+  box-shadow: inset 500px 0 0 0 gold;
   cursor: pointer;
   color: black;
 }
 
-/* button two double jeopardy */
-.btnTwo {
-  font-family: "Press Start 2P", cursive;
-  letter-spacing: 2px;
-  background-color: white;
-  width: 200px;
-  height: 50px;
-  border: none;
-  color: white;
-  background-color: blue;
-  border-radius: 5px;
-  box-shadow: inset 0 0 0 0 gold;
-  transition: ease-out 0.3s;
-  font-size: 1rem;
-  outline: none;
-}
-
-/* hover transition */
-.btnTwo:hover {
-  box-shadow: inset 200px 0 0 0 gold;
-  cursor: pointer;
-  color: black;
-}
-
-/* button three final jeopardy */
-.btnThree {
-  font-family: "Press Start 2P", cursive;
-  letter-spacing: 2px;
-  background-color: white;
-  width: 200px;
-  height: 50px;
-  border: none;
-  color: white;
-  background-color: blue;
-  border-radius: 5px;
-  box-shadow: inset 0 0 0 0 gold;
-  transition: ease-out 0.3s;
-  font-size: 1rem;
-  outline: none;
-}
-
-/* hover transition */
-.btnThree:hover {
-  box-shadow: inset 200px 0 0 0 gold;
-  cursor: pointer;
-  color: black;
-}
-
-/*-------------------- Round one CSS --------------------- */
+/* --------------------Containers-------------------- */
 
 /* ---container--- */
 .container3 {
@@ -124,26 +101,8 @@
   align-items: center;
 }
 
-/* ---header--- */
-.header2 {
-  text-align: center;
-  color: blue;
-  border: none;
-}
-
-/* ---image--- */
-.img1 {
-  display: center;
-  border: 3px solid black;
-}
-#imgOne {
-  display: center;
-  justify-content: center;
-  width: 500px;
-  height: 200px;
-}
-
-#container-board {
+/* ---Game Board Container--- */
+#container-gameBoard {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -153,6 +112,7 @@
   background-color: blue;
 }
 
+/* ---Category Boxes--- */
 .row-one {
   display: flex;
   flex-direction: row;
@@ -162,6 +122,7 @@
   background-color: cornflowerblue;
 }
 
+/* ---$100 - $200 boxes--- */
 .row-two {
   display: flex;
   flex-direction: row;
@@ -171,6 +132,7 @@
   background-color: cornflowerblue;
 }
 
+/* ---$200 - $400 boxes--- */
 .row-three {
   display: flex;
   flex-direction: row;
@@ -180,6 +142,7 @@
   background-color: cornflowerblue;
 }
 
+/* ---$300 - $600 boxes--- */
 .row-four {
   display: flex;
   flex-direction: row;
@@ -189,6 +152,7 @@
   background-color: cornflowerblue;
 }
 
+/* ---$400 - $800 boxes--- */
 .row-five {
   display: flex;
   flex-direction: row;
@@ -198,6 +162,7 @@
   background-color: cornflowerblue;
 }
 
+/* ---$500 - $1000 boxes--- */
 .row-six {
   display: flex;
   flex-direction: row;
@@ -207,7 +172,8 @@
   background-color: cornflowerblue;
 }
 
-#container-board2 {
+/* ---Container for Q&A bottom boxes---  */
+#container-QA-boxes {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
@@ -216,6 +182,7 @@
   background-color: blue;
 }
 
+/* ---What is box--- */
 .row-seven {
   display: flex;
   flex-direction: row;
@@ -227,6 +194,7 @@
   max-width: 300px;
 }
 
+/* ---Guess box--- */
 .row-eight {
   display: flex;
   flex-direction: row;
@@ -238,6 +206,7 @@
   max-width: 100px;
 }
 
+/* ---Pass box--- */
 .row-nine {
   display: grid;
   flex-direction: row;
@@ -245,30 +214,9 @@
   justify-content: center;
 }
 
-/*-------------------- Double Jeopardy css ---------------------- */
+/*--- Final Jeopardy containers --- */
 
-/* ---header--- */
-.header2 {
-  text-align: center;
-  color: blue;
-  border: none;
-}
-
-/* ---image--- */
-.img2 {
-  display: center;
-  border: 3px solid black;
-}
-#imgTwo {
-  display: center;
-  justify-content: center;
-  width: 500px;
-  height: 200px;
-}
-
-/*-------------------- Final Jeopardy css ---------------------- */
-
-/* container */
+/*--- Overall container--- */
 
 section {
   width: 100%;
@@ -279,73 +227,84 @@ section {
   margin: auto;
 }
 #container-final {
-  display: grid;
-  grid-template-columns: (4, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  /* display: grid; */
+  /* grid-template-columns: (4, 1fr);
   grid-template-rows: (4, 1fr);
   justify-content: center;
   grid-gap: 10px;
-  padding: 15px;
+  padding: 15px; */
   /* background-color: blue; */
 }
+#wrapper {
+  border: 2px solid black;
+  margin: 20px;
+  padding: none;
+}
+
+/* ---Box One final Question */
 .box-one {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 1;
-  grid-row: 1;
-  background-color: white;
-  border: 2px solid black;
+
+  /* justify-content: center;
+  align-items: center; */
+
+  /* grid-column: 1;
+  grid-row: 1; */
+  /* background-color: white; */
+  /* border: 2px solid black; */
   /* 
   flex-direction: column;
   background-color: cornflowerblue; */
 }
+
+/* ---Box Two Amount--- */
 .box-two {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2;
-  grid-row: 2;
-  background-color: yellow;
-  border: 2px solid black;
+  /* justify-content: center;
+  align-items: center; */
+  /* grid-column: 2;
+  grid-row: 2; */
+  /* background-color: yellow;
+  border: 2px solid black; */
   /* 
   flex-direction: column;
   background-color: cornflowerblue; */
 }
 
+/* ---Box Three Answer--- */
 .box-three {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 3;
-  grid-row: 3;
-  background-color: green;
-  border: 2px solid black;
+  /* justify-content: center;
+  align-items: center; */
+  /* grid-column: 3;
+  grid-row: 3; */
+  /* background-color: green;
+  border: 2px solid black; */
   /* 
   flex-direction: column;
   background-color: cornflowerblue; */
 }
 
+/* ---Box Four Bet--- */
 .box-four {
   display: flex;
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
   grid-column: 4;
   grid-row: 4;
   background-color: orange;
-  border: 2px solid black;
+  border: 2px solid black; */
   /* 
   flex-direction: column;
   background-color: cornflowerblue; */
 }
 
-/* ---image--- */
-.img3 {
-  display: center;
-  border: 3px solid black;
-}
-#imgThree {
-  display: center;
-  justify-content: center;
-  width: 500px;
-  height: 200px;
-}
+/* --------------------Footer Player status and score--------------------- */
+
+/* ---Player One box--- */
+
+/* ---Player Two Box--- */
